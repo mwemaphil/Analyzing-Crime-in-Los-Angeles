@@ -14,4 +14,5 @@ This is a recently updated data when run as it uses Socrata API to acquire real-
 # Exploratory Data Analysis
 ## Top most Category of Crimes Committed
 ![image](https://github.com/mwemaphil/Analyzing-Crime-in-Los-Angeles/assets/45120853/9d40a549-6d66-482e-9bd7-51119dad9719)
-###### From the top most committed crimes in Los Angeles, Vehicle Stealing leads the way, followed by Simple Assault and then Identity Theft. Your car is more likely to be stolen compared to any other crime in Los Angeles.
+### From the top most committed crimes in Los Angeles, Vehicle Stealing leads the way, followed by Simple Assault and then Identity Theft. Your car is more likely to be stolen compared to any other crime in Los Angeles.
+
