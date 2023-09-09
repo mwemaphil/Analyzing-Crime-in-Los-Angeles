@@ -12,7 +12,11 @@ The Los Angeles Crime dataset was created on February 11, 2020.
 This is a recently updated data when run as it uses Socrata API to acquire real-time data with a weekly refresh rate every Wednesday and has 28 columns and a total of 788,767 entries whereby each row represents a crime incident reported to a police station in Los Angeles.
 
 # Exploratory Data Analysis
-## Top most Category of Crimes Committed
+## 1. Top most Category of Crimes Committed
 ![image](https://github.com/mwemaphil/Analyzing-Crime-in-Los-Angeles/assets/45120853/9d40a549-6d66-482e-9bd7-51119dad9719)
-### From the top most committed crimes in Los Angeles, Vehicle Stealing leads the way, followed by Simple Assault and then Identity Theft. Your car is more likely to be stolen compared to any other crime in Los Angeles.
+#### From the top most committed crimes in Los Angeles, Vehicle Stealing leads the way, followed by Simple Assault and then Identity Theft. Your car is more likely to be stolen compared to any other crime in Los Angeles.
 
+## 2. Time Series Analysis
+![image](https://github.com/mwemaphil/Analyzing-Crime-in-Los-Angeles/assets/45120853/369cbcd2-96cd-42b3-8c8a-f2b6dae9653b)
+### The above graph depicts Crimes Reported/Committed Over Time since early 2020
+> From the onset of the collection of data in early 2020, there have been small gradual increments and decrements in daily reportings of crimes committed in the city.
