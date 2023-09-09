@@ -3,7 +3,7 @@
 
 This is an analysis of all crimes committed in Los Angeles since February 2020, purposely to support the Los Angeles Police Department (LAPD) in identifying patterns in criminal behaviour and to use the analytics to plan and allocate resources efficiently to tackle various crimes in different areas. 
 
-                                    Analysis done by Philip Mwema,    Tools Used --> Socrata API to acquire data, Python - Pandas, Matplolib, Numpy and seaborn
+                            Analysis done by Philip Mwema,    Tools Used --> Socrata API to acquire data, Python - Pandas, Matplolib, Numpy and Seaborn
 
 Los Angeles, California 😎. The City of Angels. Tinseltown. The Entertainment Capital of the World! Known for its warm weather, palm trees, sprawling coastline, and Hollywood, along with producing some of the most iconic films and songs!
 However, as with any highly populated city, it isn't always glamorous and there can be a large volume of crime.
