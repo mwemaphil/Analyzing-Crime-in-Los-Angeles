@@ -1,5 +1,5 @@
 # Analyzing Crime in Los Angeles
-                                        ![la_skyline](https://github.com/mwemaphil/Analyzing-Crime-in-Los-Angeles/assets/45120853/ea79d9f5-86c1-422e-9bca-77029c7dc91a)
+![la_skyline](https://github.com/mwemaphil/Analyzing-Crime-in-Los-Angeles/assets/45120853/ea79d9f5-86c1-422e-9bca-77029c7dc91a)
 
 This is an analysis of all crimes committed in Los Angeles since February 2020, purposely to support the Los Angeles Police Department (LAPD) in identifying patterns in criminal behaviour and to use the analytics to plan and allocate resources efficiently to tackle various crimes in different areas. 
                                                                                 Analysis done by Philip Mwema
