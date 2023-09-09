@@ -1,4 +1,6 @@
 # Analyzing Crime in Los Angeles
+blob:https://app.datacamp.com/be9311f0-58a2-4b8d-9afb-996e0eb35c70
+
 This is an analysis of all crimes committed in the city of Los Angeles since February 2020, purposely to support the Los Angeles Police Department (LAPD) to identify patterns in criminal behavior and to use the analytics to plan and allocate resources efficiently to tackle various crimes in different areas. 
 
 
