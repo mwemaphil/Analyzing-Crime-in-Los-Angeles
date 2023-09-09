@@ -14109,7 +14109,7 @@ div.jp-OutputPrompt {
 <p>However, as with any highely populated city, it isn't always glamarous and there can be a large volume of crime.</p>
 
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="About-the-Crime-in-Los-Angeles-Dataset">About the Crime in Los Angeles Dataset<a class="anchor-link" href="#About-the-Crime-in-Los-Angeles-Dataset">&#182;</a></h3><p>This data is provided by Los Angeles Police Department, and can be accessed publicly on <a href="https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-Present/2nrs-mtv8">LAPD OpenData's website.</a><br>
@@ -14117,7 +14117,7 @@ The Los Angeles Crime dataset was created in February 11, 2020.<br>
 This is a recently updated data when run as it uses Socrata API to acquire realtime data with a weekly refresh rate every Wednesday and has 28 columns and a total of 788,767 entries whereby each row represents a crime incident reported to a police station in Los Angeles.</p>
 
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
@@ -14138,7 +14138,7 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Data-Ingestion-and-Assessment">Data Ingestion and Assessment<a class="anchor-link" href="#Data-Ingestion-and-Assessment">&#182;</a></h3>
@@ -14177,6 +14177,217 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>WARNING:root:Requests made without an app_token will be subject to strict throttling limits.
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dr_no</th>
+      <th>date_rptd</th>
+      <th>date_occ</th>
+      <th>time_occ</th>
+      <th>area</th>
+      <th>area_name</th>
+      <th>rpt_dist_no</th>
+      <th>part_1_2</th>
+      <th>crm_cd</th>
+      <th>crm_cd_desc</th>
+      <th>...</th>
+      <th>status</th>
+      <th>status_desc</th>
+      <th>crm_cd_1</th>
+      <th>location</th>
+      <th>lat</th>
+      <th>lon</th>
+      <th>crm_cd_2</th>
+      <th>cross_street</th>
+      <th>crm_cd_3</th>
+      <th>crm_cd_4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>229039</th>
+      <td>211218542</td>
+      <td>2021-08-28T00:00:00.000</td>
+      <td>2021-08-28T00:00:00.000</td>
+      <td>0745</td>
+      <td>12</td>
+      <td>77th Street</td>
+      <td>1208</td>
+      <td>1</td>
+      <td>510</td>
+      <td>VEHICLE - STOLEN</td>
+      <td>...</td>
+      <td>IC</td>
+      <td>Invest Cont</td>
+      <td>510</td>
+      <td>4400 S  FIGUEROA                     ST</td>
+      <td>33.9997</td>
+      <td>-118.2849</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>1 rows × 28 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(788767, 28)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 788767 entries, 0 to 788766
+Data columns (total 28 columns):
+ #   Column          Non-Null Count   Dtype  
+---  ------          --------------   -----  
+ 0   DR_NO           788767 non-null  int64  
+ 1   Date Rptd       788767 non-null  object 
+ 2   DATE OCC        788767 non-null  object 
+ 3   TIME OCC        788767 non-null  int64  
+ 4   AREA            788767 non-null  int64  
+ 5   AREA NAME       788767 non-null  object 
+ 6   Rpt Dist No     788767 non-null  int64  
+ 7   Part 1-2        788767 non-null  int64  
+ 8   Crm Cd          788767 non-null  int64  
+ 9   Crm Cd Desc     788767 non-null  object 
+ 10  Mocodes         680162 non-null  object 
+ 11  Vict Age        788767 non-null  int64  
+ 12  Vict Sex        685415 non-null  object 
+ 13  Vict Descent    685407 non-null  object 
+ 14  Premis Cd       788758 non-null  float64
+ 15  Premis Desc     788300 non-null  object 
+ 16  Weapon Used Cd  274517 non-null  float64
+ 17  Weapon Desc     274517 non-null  object 
+ 18  Status          788767 non-null  object 
+ 19  Status Desc     788767 non-null  object 
+ 20  Crm Cd 1        788757 non-null  float64
+ 21  Crm Cd 2        58171 non-null   float64
+ 22  Crm Cd 3        1936 non-null    float64
+ 23  Crm Cd 4        57 non-null      float64
+ 24  LOCATION        788767 non-null  object 
+ 25  Cross Street    126409 non-null  object 
+ 26  LAT             788767 non-null  float64
+ 27  LON             788767 non-null  float64
+dtypes: float64(8), int64(7), object(13)
+memory usage: 168.5+ MB
 </pre>
 </div>
 </div>
@@ -14235,19 +14446,140 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Data-Cleaning">Data Cleaning<a class="anchor-link" href="#Data-Cleaning">&#182;</a></h3>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Dropping Unnecessary Columns:</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Part 1-2&#39;</span><span class="p">,</span> <span class="s1">&#39;Mocodes&#39;</span><span class="p">,</span> <span class="s1">&#39;Cross Street&#39;</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Assigning the correct types to columns:</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date Rptd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date Rptd&#39;</span><span class="p">])</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;DATE OCC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date Rptd&#39;</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><p><strong>From the above assessment of null values on usable columns, there will be no need to drop columns that has nulls in these columns as this will affect the general intergrity of the total number of entries as each entry represents a crime reported.</strong>
+<strong>These nulls seems to have risen from omission during entry or capture of these records on a row basis.</strong></p>
+</blockquote>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h6 id="Since-Age-of-a-victim-cannot-have-negatives-and-zero-since-it's-not-natural,-we're-going-to-replace-these-values-with-empty-to-avoid-disrupting-the-intergrity-of-the-whole-data,-i.e-0-entries-has-193,500-entries-which-is-24.5%25-of-the-whole-dataset.-This-unnatural-age-data-seems-to-have-been-erroneusly-entered-or-ommitted-in-the-original-data-collection.">Since Age of a victim cannot have negatives and zero since it's not natural, we're going to replace these values with empty to avoid disrupting the intergrity of the whole data, i.e 0 entries has 193,500 entries which is 24.5% of the whole dataset. This unnatural age data seems to have been erroneusly entered or ommitted in the original data collection.<a class="anchor-link" href="#Since-Age-of-a-victim-cannot-have-negatives-and-zero-since-it's-not-natural,-we're-going-to-replace-these-values-with-empty-to-avoid-disrupting-the-intergrity-of-the-whole-data,-i.e-0-entries-has-193,500-entries-which-is-24.5%25-of-the-whole-dataset.-This-unnatural-age-data-seems-to-have-been-erroneusly-entered-or-ommitted-in-the-original-data-collection.">&#182;</a></h6>
+</div>
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Vict Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Vict Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Vict Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Vict Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Vict Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Vict Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Vict Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Vict Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Replacing Abbreviation with full names in Vict Sex</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Vict Sex&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="s1">&#39;Female&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">:</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Replacing Abbreviation with full names in Vict Descent</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Vict Descent&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="s1">&#39;Other Asian&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="s1">&#39;Chinese&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="s1">&#39;Cambodian&#39;</span><span class="p">,</span>
+                                                         <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="s1">&#39;Filipino&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="s1">&#39;Guamanian&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="s1">&#39;Hispanic/Latin/Mexican&#39;</span><span class="p">,</span>
+                                                         <span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="s1">&#39;American Indian/Alaskan Native&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">:</span> <span class="s1">&#39;Japanese&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">:</span> <span class="s1">&#39;Korean&#39;</span><span class="p">,</span>
+                                                         <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="s1">&#39;Laotian&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">:</span> <span class="s1">&#39;Other&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">:</span> <span class="s1">&#39;Pacific Islander&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span> <span class="s1">&#39;Samoan&#39;</span><span class="p">,</span>
+                                                         <span class="s1">&#39;U&#39;</span><span class="p">:</span> <span class="s1">&#39;Hawaiian&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">:</span> <span class="s1">&#39;Vietnamese&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">:</span> <span class="s1">&#39;White&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">:</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">,</span>
+                                                         <span class="s1">&#39;Z&#39;</span><span class="p">:</span> <span class="s1">&#39;Asian Indian&#39;</span><span class="p">}</span>
+                                                        <span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">&#182;</a></h2>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Function to create visualizations to avoid repetition</span>
+
+<span class="k">def</span> <span class="nf">eda</span><span class="p">(</span><span class="n">column</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sizex</span><span class="p">,</span> <span class="n">sizey</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">):</span>
+    <span class="n">data</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="n">top</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="n">sizex</span><span class="p">,</span><span class="n">sizey</span><span class="p">));</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Top-most-Category-of-Crimes-Committed">Top most Category of Crimes Committed<a class="anchor-link" href="#Top-most-Category-of-Crimes-Committed">&#182;</a></h4>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h6 id="From-the-top-most-committed-crimes-in-Los-Angeles,-Vehicle-Stealing-leads-the-way,-followed-by-Simple-Assault-and-then-Identity-Theft.-Your-car-is-more-likely-to-be-stolen-compared-to-any-other-crime-in-Los-Angeles.">From the top most committed crimes in Los Angeles, Vehicle Stealing leads the way, followed by Simple Assault and then Identity Theft. Your car is more likely to be stolen compared to any other crime in Los Angeles.<a class="anchor-link" href="#From-the-top-most-committed-crimes-in-Los-Angeles,-Vehicle-Stealing-leads-the-way,-followed-by-Simple-Assault-and-then-Identity-Theft.-Your-car-is-more-likely-to-be-stolen-compared-to-any-other-crime-in-Los-Angeles.">&#182;</a></h6>
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
@@ -14288,19 +14620,17 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 </div>
 
-</div></section></section><section><section>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h6 id="From-the-top-most-committed-crimes-in-Los-Angeles,-Vehicle-Stealing-leads-the-way,-followed-by-Simple-Assault-and-then-Identity-Theft.-Your-car-is-more-likely-to-be-stolen-compared-to-any-other-crime-in-Los-Angeles.">From the top most committed crimes in Los Angeles, Vehicle Stealing leads the way, followed by Simple Assault and then Identity Theft. Your car is more likely to be stolen compared to any other crime in Los Angeles.<a class="anchor-link" href="#From-the-top-most-committed-crimes-in-Los-Angeles,-Vehicle-Stealing-leads-the-way,-followed-by-Simple-Assault-and-then-Identity-Theft.-Your-car-is-more-likely-to-be-stolen-compared-to-any-other-crime-in-Los-Angeles.">&#182;</a></h6>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Time-Series-Analysis">Time Series Analysis<a class="anchor-link" href="#Time-Series-Analysis">&#182;</a></h4>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h6 id="The-above-graph-depicts-Crimes-Reported/Committed-Over-Time-since-early-2020">The above graph depicts Crimes Reported/Committed Over Time since early 2020<a class="anchor-link" href="#The-above-graph-depicts-Crimes-Reported/Committed-Over-Time-since-early-2020">&#182;</a></h6><blockquote><p>From the onset of the collection of data in early 2020, there have been small gradual increments and decrements in daily reportings of crimes committed in the city.</p>
-</blockquote>
-
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
@@ -14341,12 +14671,14 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 </div>
 
-</div></section></section><section><section>
+</div></div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h6 id="You-are-more-likely-to-be-a-victim-of-a-crime-in-Los-Angeles-around-midday-as-per-the-above-graph-showing-the-distribution-of-crimes-committed-on-a-timely-basis-on-a-24-hour-clock-system.">You are more likely to be a victim of a crime in Los Angeles around midday as per the above graph showing the distribution of crimes committed on a timely basis on a 24 hour clock system.<a class="anchor-link" href="#You-are-more-likely-to-be-a-victim-of-a-crime-in-Los-Angeles-around-midday-as-per-the-above-graph-showing-the-distribution-of-crimes-committed-on-a-timely-basis-on-a-24-hour-clock-system.">&#182;</a></h6>
+<h6 id="The-above-graph-depicts-Crimes-Reported/Committed-Over-Time-since-early-2020">The above graph depicts Crimes Reported/Committed Over Time since early 2020<a class="anchor-link" href="#The-above-graph-depicts-Crimes-Reported/Committed-Over-Time-since-early-2020">&#182;</a></h6><blockquote><p>From the onset of the collection of data in early 2020, there have been small gradual increments and decrements in daily reportings of crimes committed in the city.</p>
+</blockquote>
+
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[221]:</div>
@@ -14403,17 +14735,17 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 </div>
 
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h6 id="You-are-more-likely-to-be-a-victim-of-a-crime-in-Los-Angeles-around-midday-as-per-the-above-graph-showing-the-distribution-of-crimes-committed-on-a-timely-basis-on-a-24-hour-clock-system.">You are more likely to be a victim of a crime in Los Angeles around midday as per the above graph showing the distribution of crimes committed on a timely basis on a 24 hour clock system.<a class="anchor-link" href="#You-are-more-likely-to-be-a-victim-of-a-crime-in-Los-Angeles-around-midday-as-per-the-above-graph-showing-the-distribution-of-crimes-committed-on-a-timely-basis-on-a-24-hour-clock-system.">&#182;</a></h6>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Distribution-of-Crimes-Committed-per-Victim-Sex">Distribution of Crimes Committed per Victim Sex<a class="anchor-link" href="#Distribution-of-Crimes-Committed-per-Victim-Sex">&#182;</a></h4>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h6 id="Males-represent-the-most-victims-with-a-48%25-chunk-with-Women-having-a-42%25-representation-while-the-Unknown-are-represented-by-just-10%25-(probably-did-not-want-to-disclose-their-gender)">Males represent the most victims with a 48% chunk with Women having a 42% representation while the Unknown are represented by just 10% (probably did not want to disclose their gender)<a class="anchor-link" href="#Males-represent-the-most-victims-with-a-48%25-chunk-with-Women-having-a-42%25-representation-while-the-Unknown-are-represented-by-just-10%25-(probably-did-not-want-to-disclose-their-gender)">&#182;</a></h6>
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[222]:</div>
@@ -14469,17 +14801,17 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 </div>
 
-</div></section></section><section><section>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h6 id="Males-represent-the-most-victims-with-a-48%25-chunk-with-Women-having-a-42%25-representation-while-the-Unknown-are-represented-by-just-10%25-(probably-did-not-want-to-disclose-their-gender)">Males represent the most victims with a 48% chunk with Women having a 42% representation while the Unknown are represented by just 10% (probably did not want to disclose their gender)<a class="anchor-link" href="#Males-represent-the-most-victims-with-a-48%25-chunk-with-Women-having-a-42%25-representation-while-the-Unknown-are-represented-by-just-10%25-(probably-did-not-want-to-disclose-their-gender)">&#182;</a></h6>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Distribution-of-Victim-Descent">Distribution of Victim Descent<a class="anchor-link" href="#Distribution-of-Victim-Descent">&#182;</a></h4>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h6 id="Hispanic/Latin/Mexicans-are-the-most-victims-of-crimes-committed-in-LA,-followed-by-Whites-then-Blacks.-This-means-that-most-of-the-crime-revolves-around-these-three-descents.">Hispanic/Latin/Mexicans are the most victims of crimes committed in LA, followed by Whites then Blacks. This means that most of the crime revolves around these three descents.<a class="anchor-link" href="#Hispanic/Latin/Mexicans-are-the-most-victims-of-crimes-committed-in-LA,-followed-by-Whites-then-Blacks.-This-means-that-most-of-the-crime-revolves-around-these-three-descents.">&#182;</a></h6>
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[223]:</div>
@@ -14518,19 +14850,17 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 </div>
 
-</div></section></section><section><section>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h6 id="Hispanic/Latin/Mexicans-are-the-most-victims-of-crimes-committed-in-LA,-followed-by-Whites-then-Blacks.-This-means-that-most-of-the-crime-revolves-around-these-three-descents.">Hispanic/Latin/Mexicans are the most victims of crimes committed in LA, followed by Whites then Blacks. This means that most of the crime revolves around these three descents.<a class="anchor-link" href="#Hispanic/Latin/Mexicans-are-the-most-victims-of-crimes-committed-in-LA,-followed-by-Whites-then-Blacks.-This-means-that-most-of-the-crime-revolves-around-these-three-descents.">&#182;</a></h6>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Distribution-by-Area-of-Crime----Top-10-Crime-Area">Distribution by Area of Crime -  Top 10 Crime Area<a class="anchor-link" href="#Distribution-by-Area-of-Crime----Top-10-Crime-Area">&#182;</a></h4>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h6 id="The-horizontal-graph-represents-the-distribution-of-crimes-committed-by-Area.">The horizontal graph represents the distribution of crimes committed by Area.<a class="anchor-link" href="#The-horizontal-graph-represents-the-distribution-of-crimes-committed-by-Area.">&#182;</a></h6><blockquote><p>Central area reports most of the crime in the city, followed by 77th Street, Pacific, and the rest follows closely.</p>
-</blockquote>
-
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[224]:</div>
@@ -14569,17 +14899,19 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 </div>
 
-</div></section></section><section><section>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h6 id="The-horizontal-graph-represents-the-distribution-of-crimes-committed-by-Area.">The horizontal graph represents the distribution of crimes committed by Area.<a class="anchor-link" href="#The-horizontal-graph-represents-the-distribution-of-crimes-committed-by-Area.">&#182;</a></h6><blockquote><p>Central area reports most of the crime in the city, followed by 77th Street, Pacific, and the rest follows closely.</p>
+</blockquote>
+
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Distribution-by-Victim-Age">Distribution by Victim Age<a class="anchor-link" href="#Distribution-by-Victim-Age">&#182;</a></h4>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h6 id="You-are-more-likely-to-be-a-victim-of-a-crime-committed-in-LA-if-you're-between-30-and-40-years-as-per-the-distribution-shown-in-the-histogram,-showing-the-distribution-of-victims-age-grouped-in-10-years.">You are more likely to be a victim of a crime committed in LA if you're between 30 and 40 years as per the distribution shown in the histogram, showing the distribution of victims age grouped in 10 years.<a class="anchor-link" href="#You-are-more-likely-to-be-a-victim-of-a-crime-committed-in-LA-if-you're-between-30-and-40-years-as-per-the-distribution-shown-in-the-histogram,-showing-the-distribution-of-victims-age-grouped-in-10-years.">&#182;</a></h6>
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[225]:</div>
@@ -14636,17 +14968,17 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 </div>
 
-</div></section></section><section><section>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h6 id="You-are-more-likely-to-be-a-victim-of-a-crime-committed-in-LA-if-you're-between-30-and-40-years-as-per-the-distribution-shown-in-the-histogram,-showing-the-distribution-of-victims-age-grouped-in-10-years.">You are more likely to be a victim of a crime committed in LA if you're between 30 and 40 years as per the distribution shown in the histogram, showing the distribution of victims age grouped in 10 years.<a class="anchor-link" href="#You-are-more-likely-to-be-a-victim-of-a-crime-committed-in-LA-if-you're-between-30-and-40-years-as-per-the-distribution-shown-in-the-histogram,-showing-the-distribution-of-victims-age-grouped-in-10-years.">&#182;</a></h6>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Distribution-by-Premises-Crime-Occurred---Top-10">Distribution by Premises Crime Occurred - Top 10<a class="anchor-link" href="#Distribution-by-Premises-Crime-Occurred---Top-10">&#182;</a></h4>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h6 id="Most-crimes-in-the-city-of-Los-Angeles-are-committed-in-the-Streets,-followed-by-homesteads-of-single-family-dwellings,-then-multi-unit-dwelling-units,-followed-by-parking-lots-as-visualized-in-the-horizontal-graph-above.">Most crimes in the city of Los Angeles are committed in the Streets, followed by homesteads of single-family dwellings, then multi-unit dwelling units, followed by parking lots as visualized in the horizontal graph above.<a class="anchor-link" href="#Most-crimes-in-the-city-of-Los-Angeles-are-committed-in-the-Streets,-followed-by-homesteads-of-single-family-dwellings,-then-multi-unit-dwelling-units,-followed-by-parking-lots-as-visualized-in-the-horizontal-graph-above.">&#182;</a></h6>
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[226]:</div>
@@ -14687,17 +15019,17 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 </div>
 
-</div></section></section><section><section>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h6 id="Most-crimes-in-the-city-of-Los-Angeles-are-committed-in-the-Streets,-followed-by-homesteads-of-single-family-dwellings,-then-multi-unit-dwelling-units,-followed-by-parking-lots-as-visualized-in-the-horizontal-graph-above.">Most crimes in the city of Los Angeles are committed in the Streets, followed by homesteads of single-family dwellings, then multi-unit dwelling units, followed by parking lots as visualized in the horizontal graph above.<a class="anchor-link" href="#Most-crimes-in-the-city-of-Los-Angeles-are-committed-in-the-Streets,-followed-by-homesteads-of-single-family-dwellings,-then-multi-unit-dwelling-units,-followed-by-parking-lots-as-visualized-in-the-horizontal-graph-above.">&#182;</a></h6>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Weapons-Used">Weapons Used<a class="anchor-link" href="#Weapons-Used">&#182;</a></h4>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h6 id="Most-criminals-use-their-body-as-a-weapon,-i.e.-hands,-and-feet,-while-the-next-weapon-is-unknown-to-victims,-verbal-threats-follow-in-third-while-the-use-of-handguns-comes-in-fourth-as-the-most-used-weapon-to-commit-crime-in-LA.">Most criminals use their body as a weapon, i.e. hands, and feet, while the next weapon is unknown to victims, verbal threats follow in third while the use of handguns comes in fourth as the most used weapon to commit crime in LA.<a class="anchor-link" href="#Most-criminals-use-their-body-as-a-weapon,-i.e.-hands,-and-feet,-while-the-next-weapon-is-unknown-to-victims,-verbal-threats-follow-in-third-while-the-use-of-handguns-comes-in-fourth-as-the-most-used-weapon-to-commit-crime-in-LA.">&#182;</a></h6>
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[227]:</div>
@@ -14738,17 +15070,17 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 </div>
 
-</div></section></section><section><section>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h6 id="Most-criminals-use-their-body-as-a-weapon,-i.e.-hands,-and-feet,-while-the-next-weapon-is-unknown-to-victims,-verbal-threats-follow-in-third-while-the-use-of-handguns-comes-in-fourth-as-the-most-used-weapon-to-commit-crime-in-LA.">Most criminals use their body as a weapon, i.e. hands, and feet, while the next weapon is unknown to victims, verbal threats follow in third while the use of handguns comes in fourth as the most used weapon to commit crime in LA.<a class="anchor-link" href="#Most-criminals-use-their-body-as-a-weapon,-i.e.-hands,-and-feet,-while-the-next-weapon-is-unknown-to-victims,-verbal-threats-follow-in-third-while-the-use-of-handguns-comes-in-fourth-as-the-most-used-weapon-to-commit-crime-in-LA.">&#182;</a></h6>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="Status-of-the-Crime">Status of the Crime<a class="anchor-link" href="#Status-of-the-Crime">&#182;</a></h4>
 </div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h6 id="Most-crimes-reported-from-the-onset-in-early-2020-are-still-under-investigation,-with-a-huge-gap-between-Arrests-on-both-Adult-Arrests-and-Juvenile-Arrests-and-Investigations-Continuing.-Adults-Arrested-are-significantly-higher-compared-to-Juvenile-Arrested.">Most crimes reported from the onset in early 2020 are still under investigation, with a huge gap between Arrests on both Adult Arrests and Juvenile Arrests and Investigations Continuing. Adults Arrested are significantly higher compared to Juvenile Arrested.<a class="anchor-link" href="#Most-crimes-reported-from-the-onset-in-early-2020-are-still-under-investigation,-with-a-huge-gap-between-Arrests-on-both-Adult-Arrests-and-Juvenile-Arrests-and-Investigations-Continuing.-Adults-Arrested-are-significantly-higher-compared-to-Juvenile-Arrested.">&#182;</a></h6>
-</div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[228]:</div>
@@ -14789,7 +15121,12 @@ This is a recently updated data when run as it uses Socrata API to acquire realt
 
 </div>
 
-</div></section></section>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h6 id="Most-crimes-reported-from-the-onset-in-early-2020-are-still-under-investigation,-with-a-huge-gap-between-Arrests-on-both-Adult-Arrests-and-Juvenile-Arrests-and-Investigations-Continuing.-Adults-Arrested-are-significantly-higher-compared-to-Juvenile-Arrested.">Most crimes reported from the onset in early 2020 are still under investigation, with a huge gap between Arrests on both Adult Arrests and Juvenile Arrests and Investigations Continuing. Adults Arrested are significantly higher compared to Juvenile Arrested.<a class="anchor-link" href="#Most-crimes-reported-from-the-onset-in-early-2020-are-still-under-investigation,-with-a-huge-gap-between-Arrests-on-both-Adult-Arrests-and-Juvenile-Arrests-and-Investigations-Continuing.-Adults-Arrested-are-significantly-higher-compared-to-Juvenile-Arrested.">&#182;</a></h6>
+</div>
+</div></div></section></section>
 </div>
 </div>
 </body>
